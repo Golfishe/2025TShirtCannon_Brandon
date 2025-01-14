@@ -24,7 +24,7 @@ class RobotContainer:
     
     def teleopPeriodic(self) -> None:
         if limelightSystem.get_results().tagId % 2 == 0:
-            self.arcadeDrive.arcadeDrive(1.0, 1.0)
+            self.arcadeDrive.arcadeDrive(1.0, 20.0)
 
         if limelightSystem.get_results().tagId % 2 == 1:
-            self.arcadeDrive.arcadeDrive(-1.0, 1.0)
+            self.arcadeDrive.arcadeDrive(1.0, -20.0)
